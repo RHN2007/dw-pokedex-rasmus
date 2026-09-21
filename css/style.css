@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #DC0A2D;
+    --white-color: #FFFFFF;
+    --dark-color: #212121;
+    --medium-color: #666666;
+    --light-color: #E0E0E0;
+    --background-color: #EFEFEF;
+
+    --bug-color: #A7B723;
+    --dark-color: #75574C;
+    --dragon-color: #7037FF;
+    --electric-color: #F9CF30;
+    --fairy-color: #E69EAC;
+    --fighting-color: #C12239;
+    --fire-color: #F57D31;
+    --flying-color: #A891EC;
+    --ghost-color: #70559B;
+    --normal-color: #AAA67F;
+    --grass-color: #74CB48;
+    --ground-color: #DEC16B;
+    --ice-color: #9AD6DF;
+    --poison-color: #A43E9E;
+    --psychic-color: #FB5584;
+    --rock-color: #B69E31;
+    --steel-color: #B7B9D0;
+    --water-color: #6493EB;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 0.75rem;
+    padding-block-end: 1.5rem;
+    height: 7rem;
+    gap: 0.25rem;
+}
+
+.header__logo {
+    box-sizing: content-box;
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+.header__logo img {
+    max-width: 24px;
+}
+
+.header__search {
+    display: flex;
+    gap: 1rem;
+}
+
+.search__wrapper {
+    display: flex;
+}
+
+.search__bar {
+    display: flex;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--white-color);
+    box-shadow: inset 0 5px 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.search__bar input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.header__sort {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.25rem;
+    border-radius: 9999px;
+    background-color: white;
+}
