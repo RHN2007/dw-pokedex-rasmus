@@ -1,13 +1,13 @@
 :root {
     --primary-color: #DC0A2D;
     --white-color: #FFFFFF;
-    --dark-color: #212121;
+    --dark-color: #1D1D1D;
     --medium-color: #666666;
     --light-color: #E0E0E0;
     --background-color: #EFEFEF;
 
     --bug-color: #A7B723;
-    --dark-color: #75574C;
+    --dark-type-color: #75574C;
     --dragon-color: #7037FF;
     --electric-color: #F9CF30;
     --fairy-color: #E69EAC;
@@ -112,3 +112,24 @@ body {
     gap: 0.5rem;
 }
 
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 8px -4px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--background-color);
+}
+
+.card__id {
+    text-align: right;
+}
+
+.card__name {
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--dark-color);
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
