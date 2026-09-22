@@ -8,13 +8,13 @@ export default function Header() {
         <h1>Pokédex</h1>
     </div>
     <div class="header__search">
-        <search>
-            <form action="">
+        <search class="search__wrapper">
+            <form action="" class="search__bar">
                 <img src="../assets/search.svg" alt="Search Icon">
-                <input type="text" name="search" id="search">
+                <input type="text" name="search" id="search" placeholder="Search">
             </form>
         </search>
-        <button>
+        <button class="header__sort">
             <img src="../assets/sort.svg" alt="Sort button">
         </button>
     </div>
