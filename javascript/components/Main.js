@@ -11,9 +11,11 @@ export default function Main(pokemons) {
         ${pokemons.map(function(pokemon) {
             return `
                 <li class="card">
-                    <p class="card__id">#${getIDfromURL(pokemon.url).padStart(3, "0")}</p>
-                    <img class="card__image" src="${basePokemonURL + getIDfromURL(pokemon.url) + ".png" }" alt="${pokemon.name}">
-                    <h2 class="card__name">${pokemon.name}</h2>
+                    <a href="detail.html/?id=${getIDfromURL(pokemon.url)}" class="card">
+                        <p class="card__id">#${getIDfromURL(pokemon.url).padStart(3, "0")}</p>
+                        <img class="card__image" src="${basePokemonURL + getIDfromURL(pokemon.url) + ".png" }" alt="${pokemon.name}">
+                        <h2 class="card__name">${pokemon.name}</h2>
+                    </a>
                 </li>
             `
         }).join("")}
