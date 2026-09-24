@@ -1,4 +1,5 @@
 import SearchParams from "../Functionality/SearchParam.js"
+const currentID = SearchParams("id")
 
 export default function Header() {
     let headerElement = document.createElement("header")
@@ -33,16 +34,16 @@ export function detailsHeader(pokemon) {
     <div class="header__top">
         <a class="header__back" href="index.html">
             <img src="../assets/arrow_back.svg" alt="Back to the main page">
-            <h1>${SearchParams("name")}</h1>
+            <h1>${pokemon.name}</h1>
         </a>
         <p>#${SearchParams("id").padStart(3, "0")}</p>
     </div>
     <div class="hero">
-        <a class="arrow__link" href="http://127.0.0.1:5500/detail.html?id=1&name=bulbasaur">
+        <a class="arrow__link" href="http://127.0.0.1:5500/detail.html?id=${Number(currentID) - 1}">
             <img class="arrow__left" src="../assets/chevron.svg" alt="">
         </a>
-        <img class="hero__pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${SearchParams("id")}.png" alt="${pokemon.name}">
-        <a class="arrow__link" href="http://127.0.0.1:5500/detail.html?id=2&name=${"test"}">
+        <img class="hero__pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${currentID}.png" alt="${pokemon.name}">
+        <a class="arrow__link" href="http://127.0.0.1:5500/detail.html?id=${Number(currentID) + 1}">
             <img class="arrow__right" src="../assets/chevron.svg" alt="">
         </a>
     </div>
