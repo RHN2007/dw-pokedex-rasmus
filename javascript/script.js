@@ -1,5 +1,6 @@
 import Header from "./components/Header.js";
 import Main from "./components/Main.js";
+import fetchData from "./Functionality/Fetch.js";
 
 const rootElement = document.querySelector("#root")
 let pokemons = []
@@ -12,10 +13,8 @@ function render() {
 }
 
 async function init() {
-    const pokemonURL = "https://pokeapi.co/api/v2/pokemon?limit=151"
-    let response = await fetch(pokemonURL)
-    let data = await response.json()
-    pokemons = data.results
+    pokemons = (await fetchData("?limit=151")).results
+    console.log(pokemons)
     render()
 }
 
