@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #DC0A2D;
+    --white-color: #FFFFFF;
+    --dark-color: #1D1D1D;
+    --medium-color: #666666;
+    --light-color: #E0E0E0;
+    --background-color: #EFEFEF;
+
+    --bug-type-color: #A7B723;
+    --dark-type-color: #75574C;
+    --dragon-type-color: #7037FF;
+    --electric-type-color: #F9CF30;
+    --fairy-type-color: #E69EAC;
+    --fighting-type-color: #C12239;
+    --fire-type-color: #F57D31;
+    --flying-type-color: #A891EC;
+    --ghost-type-color: #70559B;
+    --normal-type-color: #AAA67F;
+    --grass-type-color: #74CB48;
+    --ground-type-color: #DEC16B;
+    --ice-type-color: #9AD6DF;
+    --poison-type-color: #A43E9E;
+    --psychic-type-color: #FB5584;
+    --rock-type-color: #B69E31;
+    --steel-type-color: #B7B9D0;
+    --water-type-color: #6493EB;
+}
+
+body {
+    scrollbar-width: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    height: 16rem;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../assets/pokeball.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 16rem;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.header__back {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.header__back img {
+    max-width: 2rem;
+}
+
+.header__top {
+    padding: 2rem;
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-inline: auto;
+    width: 100vw;
+    padding-inline: 2rem;
+}
+
+.hero__pokemon {
+    width: 12rem;
+}
+
+.arrow__left, .arrow__right {
+    width: 2rem;
+}
+
+.arrow__right {
+    transform: rotate(180deg);
+}
+
+.main {
+    display: flex;
+    padding: 1rem;
+    background-color: var(--white-color);
+    min-height: 100vh;
+    border-radius: 0.5rem;
+    margin-inline: 1rem;
+    margin-block-end: 1.5rem;
+    box-shadow: inset 0 5px 8px -4px rgba(0, 0, 0, 0.3);
+}
+
+.main__container {
+    margin-top: 2rem;
+    width: 100vw;
+}
+
+.pokemon__types {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pokemon__type {
+    text-transform: capitalize;
+    color: white;
+    background-color: #666666;
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+    border-radius: 3rem;
+}
