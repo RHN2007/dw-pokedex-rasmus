@@ -8,7 +8,7 @@ export default function Main(pokemons) {
     <ul class="cards__container">
         ${pokemons.map(function(pokemon) {
             return `
-                <li class="card" data-name="${pokemon.name}">
+                <li class="card" data-name="${pokemon.name}" data-id="${getIDfromURL(pokemon.url)}">
                     <a href="detail.html?id=${getIDfromURL(pokemon.url)}" class="card__link">
                         <p class="card__id">#${getIDfromURL(pokemon.url).padStart(3, "0")}</p>
                         <img class="card__image" src="${basePokemonURL + getIDfromURL(pokemon.url) + ".png" }" alt="${pokemon.name}">
