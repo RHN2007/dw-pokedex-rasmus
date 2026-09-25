@@ -1,3 +1,5 @@
+let pokemonAmount = window.prompt("Hvor mange pokemons vil du se?")
+
 import Header from "./components/Header.js";
 import Main from "./components/Main.js";
 import fetchData from "./Functionality/Fetch.js";
@@ -15,7 +17,7 @@ function render() {
 }
 
 async function init() {
-    pokemons = (await fetchData("?limit=151")).results
+    pokemons = (await fetchData("?limit=" + pokemonAmount)).results
     render()
 }
 
