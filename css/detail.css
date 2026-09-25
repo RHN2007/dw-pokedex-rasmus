@@ -26,7 +26,12 @@
     --water-type-color: #6493EB;
 }
 
+#root {
+    width: 100vw;
+}
+
 body {
+    height: 100vh;
     scrollbar-width: none;
     font-family: "Poppins", sans-serif;
 }
@@ -80,7 +85,7 @@ body {
 }
 
 .hero__pokemon {
-    width: 12rem;
+    width: 16rem;
 }
 
 .arrow__left, .arrow__right {
@@ -93,9 +98,9 @@ body {
 
 .main {
     display: flex;
+    justify-content: center;
     padding: 1rem;
     background-color: var(--white-color);
-    min-height: 100vh;
     border-radius: 0.5rem;
     margin-inline: 0.5rem;
     margin-block-end: 1.5rem;
@@ -103,21 +108,23 @@ body {
 }
 
 .main__container {
-    margin-top: 2rem;
-    width: 100vw;
+    margin-block-start: 4rem;
+    
 }
 
 .pokemon__types {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-block-end: 1rem;
 }
 
 .pokemon__type {
+    font-weight: bold;
     text-transform: capitalize;
     color: white;
     background-color: #666666;
-    padding-inline: 0.5rem;
+    padding-inline: 0.75rem;
     padding-block: 0.25rem;
     border-radius: 3rem;
 }
@@ -132,6 +139,7 @@ body {
     padding: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-block: auto;
 }
 
 .about__list__item {
@@ -140,6 +148,11 @@ body {
     grid-template-columns: 1fr;
     height: 5rem;
     width: 6.5rem;
+    border-right: 2px solid var(--background-color);
+}
+
+.about__list__item:last-of-type {
+    border-right: 0;
 }
 
 .about__list__item small {
@@ -163,3 +176,44 @@ body {
     flex-direction: column;
     gap: 0;
 }
+
+.pokemon__description {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 2rem;
+}
+
+.stats h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.stats__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.stats__list {
+    border-right: 2px solid var(--background-color);
+    margin-inline-end: 1rem;
+}
+
+.stats__entry {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stats__entry meter {
+    height: 0.5rem;
+    border-radius: 2rem;
+    
+}
+ 
