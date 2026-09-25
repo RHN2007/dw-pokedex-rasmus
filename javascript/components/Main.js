@@ -11,7 +11,7 @@ export default function Main(pokemons) {
                 <li class="card" data-name="${pokemon.name}" data-id="${getIDfromURL(pokemon.url)}">
                     <a href="detail.html?id=${getIDfromURL(pokemon.url)}" class="card__link">
                         <p class="card__id">#${getIDfromURL(pokemon.url).padStart(3, "0")}</p>
-                        <img class="card__image" src="${basePokemonURL + getIDfromURL(pokemon.url) + ".png" }" alt="${pokemon.name}">
+                        <img loading="lazy" class="card__image" src="${basePokemonURL + getIDfromURL(pokemon.url) + ".png" }" alt="${pokemon.name}">
                         <h2 class="card__name">${pokemon.name}</h2>
                     </a>
                 </li>
