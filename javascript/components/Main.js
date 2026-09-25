@@ -24,6 +24,8 @@ export default function Main(pokemons) {
 }
 
 export function detailsMain (pokemon) {
+    const body = document.querySelector("body")
+    body.style.backgroundColor = "var(--" + pokemon.types[0].type.name + "-type-color)"
     const root = document.querySelector("#root")
     root.style.backgroundColor = "var(--" + pokemon.types[0].type.name + "-type-color)"
     
@@ -71,8 +73,44 @@ export function detailsMain (pokemon) {
         </ul>
     </section>
 
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, vitae?</p>
-    </div>
+    <p class="pokemon__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, vitae?</p>
+    
+    <section class="stats">
+        <h3 style="color:var(--${pokemon.types[0].type.name}-type-color);">Base Stats</h3> <!-- der er højst sandsynligt en bedre måde...-->
+        <div class="stats__wrapper">
+            <ul class="stats__list">
+                <li class="stats__name">
+                    <p>HP</p>
+                </li>
+                <li class="stats__name">
+                    <p>ATK</p>
+                </li>
+                <li class="stats__name">
+                    <p>DEF</p>
+                </li>
+                <li class="stats__name">
+                    <p>SATK</p>
+                </li>
+                <li class="stats__name">
+                    <p>SDEF</p>
+                </li>
+                <li class="stats__name">
+                    <p>SPD</p>
+                </li>
+            </ul>
+
+            <ul class="stats__all">
+                ${pokemon.stats.map(function (stat) {
+                    return `
+                    <li class="stats__entry">
+                        <p>${stat.base_stat}</p>
+                        <meter min="0" max="255" value="${stat.base_stat}"></meter>
+                    </li>
+                    `
+                }).join("")}
+            </ul>
+        </div>
+    </section>
     `
     return mainElement
 }
